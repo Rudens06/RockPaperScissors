@@ -1,19 +1,33 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500&display=swap');
 
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     background-color: #32BF6B;
     font-family: 'Oswald', sans-serif;
 }
 
-h1{
+.opentitle {
     margin-top: 150px;
     font-size: 150px;
     color: #F9FAF8;
     text-align: center;
 }
 
-button{
-    width:60%;
+.gametitle {
+    margin-top: 10px;
+    font-size: 100px;
+    color: #F9FAF8;
+    text-align: center;
+}
+
+button {
+    margin-top: 40px;
+    width: 60%;
     height: 100px;
     background-color: #008CBA;
     border: none;
@@ -24,6 +38,37 @@ button{
     border-radius: 20px;
 }
 
-button:hover{
+button:hover {
     background-color: #015b79;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.gameContainer{
+    margin: auto;
+    max-width: 1300px;
+    padding: 0 30px;
+}
+
+.score{
+    font-size: 50px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.row{
+    padding-top: 40px;
+    display: flex;
+    align-items: center;
+}
+
+.col-2{
+    font-size: 30px;
+    flex-basis: 50%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
