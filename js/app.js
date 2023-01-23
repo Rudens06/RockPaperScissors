@@ -22,6 +22,11 @@ function computerSelection() {
 function userChoice() {
   let userChoice = prompt("Input your move");
   userChoice = userChoice.toLowerCase();
+  while (userChoice != "rock" && userChoice != "paper" && userChoice != "scissors"){
+    alert("Invalid Input!\n\nPlease choose 'rock' or 'paper' or 'scissors'");
+    userChoice = prompt("Input your move");
+    userChoice = userChoice.toLowerCase();
+  }
   return userChoice;
 }
 
@@ -65,11 +70,13 @@ function game() {
   let user = 0;
   let computer = 0;
   let gameCounter = amount;
+
   for (var i = 1; i <= amount; i++) {
     gameCounter = gameCounter - 1;
     let game = playRound(computerSelection(), userChoice());
     let gameMessage = game[0];
     let gameResult = game[1];
+
     switch (gameResult) {
       case 0:
         computer++;
@@ -84,7 +91,9 @@ function game() {
             "\nGames left: " +
             gameCounter
         );
+
         break;
+
       case 1:
         computer++;
         alert(
