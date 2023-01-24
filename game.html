@@ -13,18 +13,35 @@
 <body>
     <div class="container">
         <h1 class="gametitle">Rock, Paper, Scissors!</h1>
-        <div class="gameContainer">
-            <h3 class="score">Score</h3>
+        <div class="gameContainer" id="gameContainer">
+            <h3 id="remaining-games-title">Remaining games:</h3>
+            <h3 id="remaining-games">0</h3>
+            <h3 id="score">Score</h3>
             <div class="row">
                 <div class="col-2">
                     <h3>You</h3>
+                    <h3 id="usr-score">0</h3>
+                    <div class="button-container">
+                        <button class="choice-btn" id="rock">Rock</button>
+                        <button class="choice-btn" id="paper">Paper</button>
+                        <button class="choice-btn" id="scissors">Scissors</button>
+                    </div>
                 </div>
                 <div class="col-2">
                     <h3>Computer</h3>
+                    <h3 id="pc-score">0</h3>
+                    <div id="computer-btn-container" class="button-container">
+                    </div>
                 </div>
             </div>
         </div>
-        <button onclick="game()">Start Game!</button>
+        <div class="gamecount-popup" id="gamecount-popup">
+            <h1 class="popup-title">How many games would you like to play?</h1>
+            <input id="game-count-input" type="number">
+            <button id="popup-btn" onclick="gameStart()" type="submit">Start Game!</button>
+        </div>
+        <button id="main-btn" class="big-btn" onclick="gameStartup()">Start Game!</button>
+        <button >Esmu Nesmuka Poga</button>
     </div>
 </body>
 

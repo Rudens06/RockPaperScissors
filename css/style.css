@@ -25,8 +25,8 @@ body {
     text-align: center;
 }
 
-button {
-    margin-top: 40px;
+.big-btn{
+    margin-top: 60px;
     width: 60%;
     height: 100px;
     background-color: #008CBA;
@@ -35,11 +35,19 @@ button {
     font-size: 40px;
     margin-left: calc(0.2*100vw);
     transition: all 0.2s ease;
+    transform: scale(1);
+    visibility: visible;
     border-radius: 20px;
 }
 
-button:hover {
+.big-btn-hide{
+    transform: scale(0.01);
+    visibility: hidden;
+}
+
+.big-btn:hover {
     background-color: #015b79;
+    cursor: pointer;
 }
 
 a{
@@ -53,16 +61,29 @@ a{
     padding: 0 30px;
 }
 
-.score{
+#score{
     font-size: 50px;
     text-align: center;
     padding-top: 20px;
+}
+
+#remaining-games-title, #remaining-games{
+    font-size: 50px;
+    left: 50%;
+    padding-top: 20px;
+    text-align: center;
+}
+
+#remaining-games{
+    margin-bottom: 50px
 }
 
 .row{
     padding-top: 40px;
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .col-2{
@@ -71,4 +92,158 @@ a{
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+/* -------------------- GameCount PopUp ----------------------- */
+
+.gamecount-popup{
+    width: 400px;
+    height: 350px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.01);
+    visibility: hidden;
+    background-color: hsl(0, 0%, 69%);
+    border-radius: 30px;
+    text-align: center;
+    transition: all 0.1s;
+}
+
+.open-popup{
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.gamecount-popup h1{
+    margin: 20px; 
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.gamecount-popup input{
+    font-size: 20px;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 10px;
+    outline: none;
+    margin-top: 20px;
+}
+
+#popup-btn{
+    margin-top: 40px;
+    width: 50%;
+    height: 50px;
+    background-color: #008CBA;
+    border: none;
+    color: white;
+    font-size: 30px;
+    border-radius: 20px;
+}
+
+#popup-btn:hover {
+    background-color: #015b79;
+    cursor: pointer;
+}
+
+/* -------------------- Winner PopUp ----------------------- */
+
+.winner-popup{
+    width: 400px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.01);
+    visibility: hidden;
+    background-color: hsl(0, 0%, 69%);
+    border-radius: 30px;
+    text-align: center;
+    transition: all 0.1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.winner-popup h3{
+    margin: 40px; 
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.winner-popup.open-popup{
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* -------------------- Game PopUp ----------------------- */
+
+.game-popup{
+    width: 500px;
+    height: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.01);
+    visibility: hidden;
+    background-color: hsl(0, 0%, 69%);
+    border-radius: 30px;
+    text-align: center;
+    transition: all 0.1s;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-popup h3{
+    margin: 40px; 
+    font-weight: 400;
+    font-size: 40px;
+}
+
+.game-popup.open-popup{
+    visibility: visible;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* -------------------- Choice Buttons ----------------------- */
+
+.button-container {
+    height: 100px;
+}
+
+.choice-btn {
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.choice-btn:hover{
+    background-color: rgb(183, 164, 140);
+}
+
+.pc-choice-btn {
+    width: 100px;
+    height: 100px;
+    background-color: bisque;
+    transition: all 0.2s;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    border-radius: 20px;
+    margin-left: 30px;
+}
+
+.pc-choice-btn:hover {
+   cursor: default;
+}
+
+#usr-score, #pc-score {
+    margin-bottom: 30px;
 }
